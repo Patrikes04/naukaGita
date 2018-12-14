@@ -1,0 +1,30 @@
+<BCPFORMAT
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <RECORD>
+      <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t" 
+            MAX_LENGTH="4"/>
+      <FIELD xsi:type="CharFixed" ID="C2" LENGTH="10" 
+         COLLATION="SQL_LATIN1_GENERAL_CP1_CI_AS"/>
+      <FIELD xsi:type="CharPrefix" ID="C3" PREFIX_LENGTH="2" 
+         MAX_LENGTH="32" COLLATION="SQL_LATIN1_GENERAL_CP1_CI_AS"/>
+      <FIELD xsi:type="NCharTerm" ID="C4" TERMINATOR="\t" 
+         MAX_LENGTH="4"/>
+      <FIELD xsi:type="NCharFixed" ID="C5" LENGTH="10" 
+         COLLATION="SQL_LATIN1_GENERAL_CP1_CI_AS"/>
+      <FIELD xsi:type="NCharPrefix" ID="C6" PREFIX_LENGTH="2" 
+         MAX_LENGTH="32" COLLATION="SQL_LATIN1_GENERAL_CP1_CI_AS"/>
+      <FIELD xsi:type="NativeFixed" ID="C7" LENGTH="4"/>
+   </RECORD>
+   <ROW>
+      <COLUMN SOURCE="C1" NAME="Age" xsi:type="SQLTINYINT"/>
+      <COLUMN SOURCE="C2" NAME="FirstName" xsi:type="SQLVARYCHAR" 
+      LENGTH="16" NULLABLE="NO"/>
+      <COLUMN SOURCE="C3" NAME="LastName" />
+      <COLUMN SOURCE="C4" NAME="Salary" xsi:type="SQLMONEY"/>
+      <COLUMN SOURCE="C5" NAME="Picture" xsi:type="SQLIMAGE"/>
+      <COLUMN SOURCE="C6" NAME="Bio" xsi:type="SQLTEXT"/>
+      <COLUMN SOURCE="C7" NAME="Interest"xsi:type="SQLDECIMAL" 
+      PRECISION="5" SCALE="3"/>
+   </ROW>
+</BCPFORMAT>
